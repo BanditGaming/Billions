@@ -1,0 +1,6 @@
+net.Receive("PW_Billions_Workbench_ItemCrafted", function()
+  local ply = net.ReadEntity()
+  local company = PW_Billions.getCompany(net.ReadString())
+  local itemClass = net.ReadString()
+  hook.Run("PW_Billions_Workbench_ItemCrafted", ply, company, itemClass)
+end)

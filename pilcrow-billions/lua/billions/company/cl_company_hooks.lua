@@ -1,0 +1,11 @@
+net.Receive("PW_Billions_Company_LevelUp", function()
+  local company = PW_Billions.getCompany(net.ReadString())
+  local startingLvl = net.ReadInt(16)
+  local addedSkillPoints = net.ReadInt(4)
+  hook.Run("PW_Billions_Company_LevelUp", company, company:getLevel(), startingLvl, addedSkillPoints)
+end)
+
+net.Receive("PW_Billions_Company_NewCompany_Created", function()
+  local ownerSid64 = net.ReadString()
+  hook.Run("PW_Billions_Company_NewCompany", PW_Billions.getCompany(ownerSid64), true)
+end)

@@ -1,0 +1,10 @@
+"AddonInfo"
+{
+        "name"              "Billions"
+        "version"           "1.6.2"
+        "up_date"           "20.04.2019"
+        "author_name"       "Yogosh"
+        "author_email"      ""
+        "info"              "Addon about running a company and stuff"
+        "override"          "0"
+}
